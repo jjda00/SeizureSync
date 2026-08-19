@@ -191,34 +191,29 @@ text-shadow:0 0 18px rgba(194,42,25,.85), 0 3px 6px rgba(0,0,0,.35);}
  
 /* ================= NEW: PAGE 0 — HOME ================= */
  
-/* ================= NEW: PAGE 0 — HOME ================= */
+#page-home {
+  position: relative;
+  min-height: 100vh;
 
-#page-home{
   background-image: url('./firstone.jpg');
-  background-size: cover;
-  background-position: center center;
+  background-size: 100% auto;
+  background-position: top center;
   background-repeat: no-repeat;
+  background-color: #fff;
 }
 
-#page-home .content.home-content{
-  margin: 0;
-  padding: 0;
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  background: transparent;
-}
-
-#page-home .home-inner{
+#page-home .home-inner {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  padding: 125px 22px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  min-height: 100vh;
+}
+
+#page-home .bottom-nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
 }
  
 .home-header{display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:2px;}
