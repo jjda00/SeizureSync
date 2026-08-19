@@ -48,10 +48,15 @@ body{
   }
 }
 .screen{
-  position:absolute; inset:0; display:none;
-  flex-direction:column; padding:0 22px 0;
-  overflow:hidden;
+  position:absolute;
+  inset:0;
+  display:none;
+  flex-direction:column;
+  padding:0 22px 0;
+  overflow-y:auto;
+  overflow-x:hidden;
 }
+
 .screen.active{display:flex;}
 #page-input .content{justify-content:center; padding-top:48px;}
  
@@ -190,31 +195,40 @@ text-shadow:0 0 18px rgba(194,42,25,.85), 0 3px 6px rgba(0,0,0,.35);}
 .play-icon{font-size:11px;}
  
 /* ================= NEW: PAGE 0 — HOME ================= */
- 
+
 #page-home {
   position: relative;
-  min-height: 100vh;
-
+  width: 100%;
+  min-height: 100%;
+  
   background-image: url('./firstone.jpg');
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: #fff;
+  
+  overflow: visible;
 }
 
 #page-home .home-inner {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 #page-home .bottom-nav {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 10;
+  position: relative;
+  left: auto;
+  bottom: auto;
+  width: calc(100% + 44px);
+  margin-left: -22px;
+  margin-top: auto;
+  
+  z-index: 100;
+  background: transparent;
+  border-top: none;
+  flex-shrink: 0;
 }
+
  
 .home-header{display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:2px;}
 .home-header .title{font-size:34px; font-weight:800; margin-bottom:0; text-shadow:0 2px 10px rgba(0,0,0,.3);}
