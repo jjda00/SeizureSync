@@ -191,6 +191,15 @@ text-shadow:0 0 18px rgba(194,42,25,.85), 0 3px 6px rgba(0,0,0,.35);}
  
 /* ================= NEW: PAGE 0 — HOME ================= */
  
+/* ================= NEW: PAGE 0 — HOME ================= */
+
+#page-home{
+  background-image: url('./firstone.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 #page-home .content.home-content{
   margin: 0;
   padding: 0;
@@ -199,27 +208,17 @@ text-shadow:0 0 18px rgba(194,42,25,.85), 0 3px 6px rgba(0,0,0,.35);}
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  position: relative;
+  background: transparent;
 }
+
 #page-home .home-inner{
   position: relative;
-  flex-shrink: 0;
+  width: 100%;
   min-height: 100%;
-  padding: 100px 22px 0;
+  padding: 125px 22px 0;
   display: flex;
   flex-direction: column;
   gap: 48px;
-}
- 
-#page-home .home-inner::before{
-  content: “”;
-  position: absolute;
-  inset: 0;
-  background: url(firstone.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
  
 .home-header{display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:2px;}
@@ -245,8 +244,8 @@ text-shadow:0 0 18px rgba(194,42,25,.85), 0 3px 6px rgba(0,0,0,.35);}
 .doctor-card:hover{transform:none; box-shadow:0 14px 30px rgba(0,0,0,.35);}
  
 #page-home .bottom-nav{
-  background:linear-gradient(180deg, rgba(46,37,71,0) 0%, var(--purple-3) 45%);
-  border-top:1px solid rgba(255,255,255,.15);
+  background: transparent;
+  border-top: none;
 }
 #page-home .bottom-nav svg{color:rgba(255,255,255,.65);}
 #page-home .bottom-nav svg:hover{color:#fff;}
@@ -298,4 +297,3 @@ text-shadow:0 0 18px rgba(194,42,25,.85), 0 3px 6px rgba(0,0,0,.35);}
 }
 #page-diary .bottom-nav svg{color:#4a4460;}
 #page-diary .bottom-nav svg:hover{color:#2e2547;}
- 
